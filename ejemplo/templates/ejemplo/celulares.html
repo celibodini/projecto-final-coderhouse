@@ -1,0 +1,16 @@
+{% extends 'ejemplo/base.html' %}
+{% block contenido %}
+{% for celulares in lista_celulares %}
+<ul>
+    <li> Nombre: {{celulares.nombre}}, Marca: {{celulares.marca}}, Precio: {{celulares.precio}}
+        <!-- Esto agrega un link al form de actulización-->
+        <a href='actualizar/{{ celulares.id }}'>Actualizar</a>
+    </li>
+</ul>
+{% endfor %}
+{%endblock %}
+
+{% block titulo%}
+Lista de todos mis Celulares
+{% endblock %}
+    

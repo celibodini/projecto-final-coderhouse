@@ -1,0 +1,16 @@
+{% extends 'ejemplo/base.html' %}
+{% block titulo%} Buscar Celulares por nombre {% endblock %}
+{% block contenido %}
+  
+  <form action="/celular/buscar" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+  </form>
+
+  {% for celulares in lista_celulares %}
+      <ul>
+          <li> Nombre: {{celulares.nombre}}, Marca: {{celulares.marca}}, Precio: {{celulares.precio}}</li>
+      </ul>
+  {% endfor %}
+{% endblock %}
