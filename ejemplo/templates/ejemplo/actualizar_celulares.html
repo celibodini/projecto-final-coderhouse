@@ -2,7 +2,7 @@
 {% block titulo%} Modificar un Celular {% endblock %}
 {% block contenido %}
 
-<form action="/celular/actualizar/{{ celulares.id }}" method="post"> 
+<form action="/celulares/actualizar/{{ celulares.id }}" method="post"> 
     {% csrf_token %}
     {{ form }}
     <input type="submit" value="Submit">

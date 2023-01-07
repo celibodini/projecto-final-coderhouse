@@ -2,7 +2,7 @@
 {% block titulo%} Alta de nuevo Celular {% endblock %}
 {% block contenido %}
   
-  <form action="/celular/alta" method="post">
+  <form action="/celulares/alta" method="post">
     {% csrf_token %}
     {{ form }}
     <input type="submit" value="Submit">
