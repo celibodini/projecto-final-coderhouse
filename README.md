@@ -1,5 +1,5 @@
-# projecto-final-coderhouse
-Este projecto fue realizado con python 3.11 y django 4.1.4
+# proyecto-final-coderhouse
+Este proyecto fue realizado con python 3.11 y django 4.1.4
 
 ## Pasos para su funcionamiento
 
@@ -54,3 +54,6 @@ python manage.py runserver
 ```
 Hace click en el siguiente link para verlo corriendo:
 http://localhost:8000/
+
+En el siguiente link se puede ver el video del funcionamiento del programa: 
+https://youtu.be/po9qQJeMZQc
