@@ -19,7 +19,7 @@ from django.contrib import admin
 from django.urls import path
 from django.views.generic import TemplateView
 from ejemplo.views import (monstrar_celulares, BuscarCelular, AltaCelular, ActualizarCelular, CelularDetalle, CelularList, CelularCrear, CelularBorrar, CelularActualizar)
-from ejemplo_dos.views import (index, PostDetalle, PostListar, 
+from ejemplo_celulares.views import (index, PostDetalle, PostListar, 
                                PostCrear, PostBorrar, PostActualizar,
                                UserSignUp, UserLogin, UserLogout, 
                                AvatarActualizar, UserActualizar, MensajeCrear, MensajeListar, MensajeDetalle )

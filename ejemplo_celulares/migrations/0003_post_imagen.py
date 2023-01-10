@@ -5,7 +5,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('ejemplo_dos', '0002_avatar'),
+        ('ejemplo_celulares', '0002_avatar'),
     ]
 
     operations = [
