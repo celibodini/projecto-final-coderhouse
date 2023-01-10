@@ -15,7 +15,7 @@
         {{post.publicado_el}} - - {{post.titulo}} 
         {% if user.is_superuser %}
             <a href="{% url 'ejemplo-celulares-borrar' post.id %}">Borrar</a>
-            <a href="{% url 'ejemplo-dos-actualizar' post.id %}">Actualizar</a>
+            <a href="{% url 'ejemplo-celulares-actualizar' post.id %}">Actualizar</a>
         {% endif %}
         <a href="{% url 'ejemplo-celulares-detalle' post.id %}">Ver</a>
     </li>
