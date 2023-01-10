@@ -22,7 +22,7 @@ from ejemplo.views import (monstrar_celulares, BuscarCelular, AltaCelular, Actua
 from ejemplo_celulares.views import (index, PostDetalle, PostListar, 
                                PostCrear, PostBorrar, PostActualizar,
                                UserSignUp, UserLogin, UserLogout, 
-                               AvatarActualizar, UserActualizar, MensajeCrear, MensajeListar, MensajeDetalle )
+                               AvatarActualizar, UserActualizar, MensajeCrear, MensajeListar, MensajeDetalle, about )
 from django.contrib.admin.views.decorators import staff_member_required
 
 
@@ -52,6 +52,7 @@ urlpatterns = [
     path('ejemplo-celulares/mensajes/crear/', MensajeCrear.as_view(), name="ejemplo-celulares-mensajes-crear"),
     path('ejemplo-celulares/mensajes/<int:pk>/detalle/', MensajeDetalle.as_view(), name="ejemplo-celulares-mensajes-detalle"),
     path('ejemplo-celulares/mensajes/listar/', MensajeListar.as_view(), name="ejemplo-celulares-mensajes-listar"),
+    path('ejemplo-celulares/about', about, name='ejemplo-celulares-about'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -13,6 +13,12 @@ from django.contrib.auth.admin import User
 
 def index(request):
     posts = Post.objects.order_by('-publicado_el').all()
+    queryset = request.GET.get('buscar')
+    posts = Post.objects.order_by('-id').all()
+    if queryset:
+        posts = Post.objects.filter(Q(titulo__icontains = queryset) |
+                                    Q(sub_titulo__icontains = queryset) |
+                                    Q(texto__icontains = queryset)).distinct()
     return render(request, "ejemplo_celulares/index.html", {"posts": posts})
 
 class PostDetalle(DetailView):
@@ -73,3 +79,6 @@ class MensajeCrear(CreateView):
 class MensajeBorrar(LoginRequiredMixin, DeleteView):
     model = Mensaje
     success_url = reverse_lazy("ejemplo-celulares-mensajes-listar")
+
+def about(request):
+    return render(request, 'ejemplo_celulares/about.html')
